@@ -1,0 +1,58 @@
+package ejem.cal;
+import ejem.cal.Operaciones;
+import java.util.*;
+import java.io.*;
+public class Cal 
+{
+  public static void main(String[] args) 
+  {
+   int i=5;
+   Scanner leer = new Scanner (System.in);
+   int option;
+   Operaciones obj=new Operaciones();
+   
+   do
+   {
+    System.out.println("1.Suma");
+    System.out.println("2.Resta");
+    System.out.println("3.Multiplicacion");
+    System.out.println("4.Divicion");
+    System.out.println("5.Salir");
+    System.out.println("Elige una opción");
+    option =leer.nextInt();
+    int var;
+   switch (option)
+   {
+     case 1: do
+     { 
+      obj.sumar();
+      System.out.println("1.Continuar \n2.Salir");
+      var= leer.nextInt();
+     }while(var<2);
+      System.out.println("Vuelva pronto");
+     break ;
+     case 2: obj.resta();
+      System.out.println("Vuelva pronto");
+     break ;
+     case 3: do
+     {
+      obj.multi();    
+      System.out.println("1.Continuar \n2.Salir ");
+      var= leer.nextInt();
+      }while(var<2);
+      System.out.println("Vuelve pronto");
+     break ;
+     case 4: do
+     {
+      obj.divi();
+      System.out.println("1.Continuar \n2.Salir");
+      var= leer.nextInt();
+     }while(var<2);
+      System.out.println("Vuelve pronto");
+     break ;
+     case 5: System.out.println("Proceso terminado. Vuelve pronto 🙂 ");
+     break ;
+     default: System.out.println("opcion invalida");
+   }
+  }while(i<5);
+}}
